@@ -17,7 +17,7 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Don't Buy"]   = {"Carrot", "Strawberry", "Blueberry", "Tulip", "Tomato", "Apple", "Corn", "Cactus", "Pineapple", "Green Bean", "Banana", "Grape", "Coconut", "Mango", "Dragon Fruit", "Acorn", "Cheryy", "Sunflower", "Venus Fly Trap", "Pomegranate", "Poison Aplle"},                 -- e.g. { "Mango", "Coconut" }
         ["Keep Seeds"]  = {
             ["Dragon's Breath"] = 5, ["Moon Bloom"] = 5, ["Venom Spitter"] = 5,
-            ["Gold"] = 15, ["Rainbow"] = 5,
+            ["Gold"] = 55, ["Rainbow"] = 55,
        },
     },
     ["Money"] = {

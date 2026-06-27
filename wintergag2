@@ -13,7 +13,7 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Only Plant"]  = {},                 -- e.g. { "Bamboo", "Apple" }  (plant ONLY these)
         ["Minimum Seed"] = "",                -- e.g. "Bamboo"  (never BUY/PLANT a seed cheaper than this tier — stops it filling with Carrot/Strawberry/Blueberry junk. "" = no floor, fill with anything)
         ["Layout"]      = "compact",          -- "compact" / "spread"
-        ["Don't Plant"] = { "Rainbow", "Gold", " Mega", "Dragon's Breath", "Moon Bloom", "Venom Spitter" },                -- e.g. { "Carrot", "Green Bean" }
+        ["Don't Plant"] = { "Rainbow", "Gold", "Mega", "Dragon's Breath", "Moon Bloom", "Venom Spitter" },                -- e.g. { "Carrot", "Green Bean" }
         ["Don't Buy"]   = {"Carrot", "Strawberry", "Blueberry", "Tulip", "Tomato", "Apple", "Corn", "Cactus", "Pineapple"},                 -- e.g. { "Mango", "Coconut" }
         ["Keep Seeds"]  = {
             ["Dragon's Breath"] = 5, ["Moon Bloom"] = 5, ["Venom Spitter"] = 5,
@@ -79,7 +79,7 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Hide Crop Visuals"]    = true,      -- true / false  (hide your own plants; they still grow & harvest)
     },
     ["Debug"] = {
-        ["Log To File"] = true,   -- true / false  (writes GAG_LOG_<name>.txt — a timestamped log of what the farm did + WHY it skipped something)
-        ["Console"]     = false,   -- true / false  (also print log lines to the executor console). Or a list to filter, e.g. { "REPLACE", "ERROR" }
+        ["Log To File"] = false,   -- true / false  (writes GAG_LOG_<name>.txt — a timestamped log of what the farm did + WHY it skipped something)
+        ["Console"]     = true,   -- true / false  (also print log lines to the executor console). Or a list to filter, e.g. { "REPLACE", "ERROR" }
     },
 }

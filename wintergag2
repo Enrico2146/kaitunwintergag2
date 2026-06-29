@@ -8,7 +8,7 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Wait For Mutation"] = {},           -- e.g. { "Mushroom", "Bamboo" }  (don't harvest these until they get ANY mutation — wait for a weather event to mutate them; they're also kept from the shovel while waiting)
     },
     ["Planting"] = {
-        ["Auto Plant"]  = true,               -- true / false  (false = never buy/plant; also stops expand/replace)
+        ["Auto Plant"]  = false,               -- true / false  (false = never buy/plant; also stops expand/replace)
         ["Plant Plan"]  = {},                 -- e.g. { Apple = 50, ["Dragon Fruit"] = 20 }  (keep N planted, then auto-fill)
         ["Only Plant"]  = {},                 -- e.g. { "Bamboo", "Apple" }  (plant ONLY these)
         ["Minimum Seed"] = "",                -- e.g. "Bamboo"  (never BUY/PLANT a seed cheaper than this tier — stops it filling with Carrot/Strawberry/Blueberry junk. "" = no floor, fill with anything)

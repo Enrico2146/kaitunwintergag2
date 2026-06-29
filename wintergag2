@@ -8,21 +8,21 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Wait For Mutation"] = {},           -- e.g. { "Mushroom", "Bamboo" }  (don't harvest these until they get ANY mutation — wait for a weather event to mutate them; they're also kept from the shovel while waiting)
     },
     ["Planting"] = {
-        ["Auto Plant"]  = false,               -- true / false  (false = never buy/plant; also stops expand/replace)
+        ["Auto Plant"]  = true,               -- true / false  (false = never buy/plant; also stops expand/replace)
         ["Plant Plan"]  = {},                 -- e.g. { Apple = 50, ["Dragon Fruit"] = 20 }  (keep N planted, then auto-fill)
         ["Only Plant"]  = {},                 -- e.g. { "Bamboo", "Apple" }  (plant ONLY these)
-        ["Minimum Seed"] = "",                -- e.g. "Bamboo"  (never BUY/PLANT a seed cheaper than this tier — stops it filling with Carrot/Strawberry/Blueberry junk. "" = no floor, fill with anything)
+        ["Minimum Seed"] = "Venus Fly Trap",                -- e.g. "Bamboo"  (never BUY/PLANT a seed cheaper than this tier — stops it filling with Carrot/Strawberry/Blueberry junk. "" = no floor, fill with anything)
         ["Layout"]      = "compact",          -- "compact" / "spread"
-        ["Don't Plant"] = { "Rainbow", "Gold", "Mega", "Dragon's Breath", "Moon Bloom", "Hypno Bloom", "Venom Spitter" },                -- e.g. { "Carrot", "Green Bean" }
-        ["Don't Buy"]   = {"Carrot", "Strawberry", "Blueberry", "Tulip", "Tomato", "Apple", "Corn", "Cactus", "Pineapple"},                 -- e.g. { "Mango", "Coconut" }
+        ["Don't Plant"] = { "Rainbow", "Gold", "Mega", "Dragon's Breath", "Moon Bloom", "Hypno Bloom" },                -- e.g. { "Carrot", "Green Bean" }
+        ["Don't Buy"]   = {},                 -- e.g. { "Mango", "Coconut" }
         ["Keep Seeds"]  = {
-            ["Dragon's Breath"] = 5, ["Moon Bloom"] = 5, ["Venom Spitter"] = 5,
-            ["Gold"] = 55, ["Rainbow"] = 55,
+            ["Dragon's Breath"] = 55, ["Moon Bloom"] = 54, ["Hypno Bloom"] = 55,
+            ["Gold"] = 55, ["Rainbow"] = 55, ["Mega"] = 55,
        },
     },
     ["Money"] = {
         ["Keep Cash"]          = 15000,    -- always keep at least this much money
-        ["Auto Expand Plot"]   = true,     -- buy plot expansions automatically
+        ["Auto Expand Plot"]   = false,     -- buy plot expansions automatically
         ["Max Expansions"]     = 3,        -- cap how many expansions to auto-BUY this run. 0 = no limit; default 3 = stop after 3 (raise for a bigger plot)
         ["Expand If Over"]     = 100000,  -- only spend on an expansion when your cash is above this
         ["Auto Replace Plants"] = true,    -- when the plot is full, dig up low-value plants and plant better ones
@@ -33,7 +33,7 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Exact"]       = {},                 -- e.g. { { fruit = "Carrot", mut = "Gold" } }
     },
     ["Pets"] = {
-        ["Buy"]            = { "Raccoon"},   -- list = tame UNLIMITED; OR caps { Robin = 6, Deer = 6 } = stop once you OWN N of that species; mix ok { "Unicorn", Deer = 6 }
+        ["Buy"]            = { "Raccoon", "Big Unicorn"},   -- list = tame UNLIMITED; OR caps { Robin = 6, Deer = 6 } = stop once you OWN N of that species; mix ok { "Unicorn", Deer = 6 }
         ["Equip"]          = { Deer = 6 },    -- e.g. { Deer = 4, Unicorn = 1 }  (name = how many)
         ["Auto Buy Slots"] = false,            -- true / false
         ["Max Pet Slots"]  = 3,               -- number 3..6
@@ -54,8 +54,8 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Auto Claim"] = true,                -- true / false
         ["Send To"]    = "encori21",                  -- username to funnel items to ("" = off)
         ["Send"]       = {                    -- e.g. { "Gold", "Deer", { Item = "Deer", Count = 5 } }  (equipped pets never sent)
-            "Moon Bloom", "Dragon's Breath", "Hypno Bloom", "Venom Spitter", "Gold", "Rainbow", "Mega", 
-            "Deer", "GoldenDragonfly", "Unicorn", "Robin", "Raccoon", "Turtle",
+            "Moon Bloom", "Dragon's Breath", "Hypno Bloom", "Gold", "Rainbow", "Mega", 
+            "Deer", "GoldenDragonfly", "Big Unicorn", "Robin", "Raccoon", "Turtle",
             "Super Sprinkler", "Legendary Sprinkler", "Super Watering Can",
         },
     },

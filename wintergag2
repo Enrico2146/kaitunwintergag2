@@ -13,13 +13,13 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Only Plant"]  = {},                 -- e.g. { "Bamboo", "Apple" }  (plant ONLY these)
         ["Minimum Seed"] = "Venus Fly Trap",                -- e.g. "Bamboo"  (never BUY/PLANT a seed cheaper than this tier — stops it filling with Carrot/Strawberry/Blueberry junk. "" = no floor, fill with anything)
         ["Layout"]      = "compact",          -- "compact" / "spread"
-        ["Don't Plant"] = { "Rainbow", "Gold", "Mega", "Dragon's Breath", "Moon Bloom", "Hypno Bloom" },                 -- e.g. { "Carrot", "Green Bean" }
+        ["Don't Plant"] = { "Carrot", "Rainbow", "Gold", "Mega", "Dragon's Breath", "Moon Bloom", "Hypno Bloom" },                 -- e.g. { "Carrot", "Green Bean" }
         ["Don't Buy"]   = {},                 -- e.g. { "Mango", "Coconut" }
-        ["Keep Seeds"]  = { "Rainbow", "Gold", "Mega", "Dragon's Breath", "Moon Bloom", "Hypno Bloom" },
+        ["Keep Seeds"]  = { "Carrot", "Rainbow", "Gold", "Mega", "Dragon's Breath", "Moon Bloom", "Hypno Bloom" },
         ["Plant Limit"] = 100,                  -- number (0 = off). Cap TOTAL plants at this: never plant past it, AND if you're ALREADY over (e.g. 800), shovel the lowest-tier plants DOWN to it to cut lag / stop the game force-closing. Set ~200. Never shovels mutated (Gold/Rainbow/Mega), Mega-size, Plant-Plan or never-sell plants.
         ["Never Shovel"] = {"Venus Fly Trap", "Pomegranate", "Poison Apple", "Venom Spitter", "Dragon's Breath", "Moon Bloom", "Hypno Bloom" },                -- e.g. { "Dragon Fruit", "Mango" }  (extra plants the Plant Limit shovel must NEVER remove — for your high-tier crops)
         ["Shovel Up To"] = "",                -- e.g. "Rare"  (a RARITY TIER — Common/Uncommon/Rare/Epic — removes ONLY that tier and below. "" = no extra ceiling. LEGENDARY/Mythic/Super are ALWAYS protected regardless. Single-harvest crops are HARVESTED when ripe, never shoveled — no wasted fruit)
-        ["Buy Seeds"]    = { ["Dragon's Breath"] = 20, ["Moon Bloom"] = 20, ["Hypno Bloom"] = 20, Carrot = 20 },                -- e.g. { Bamboo = 500, Mushroom = 25 }  (BUY & HOLD these seeds up to N — for MAILING, NEVER planted. Only SHOP seeds; event seeds like Gold/Moon Bloom/Dragon's Breath can't be bought. Bought after the farm is filled, above Keep Cash)
+        ["Buy Seeds"]    = { ["Dragon's Breath"] = 20, ["Moon Bloom"] = 20, ["Hypno Bloom"] = 20, Carrot = 500 },                -- e.g. { Bamboo = 500, Mushroom = 25 }  (BUY & HOLD these seeds up to N — for MAILING, NEVER planted. Only SHOP seeds; event seeds like Gold/Moon Bloom/Dragon's Breath can't be bought. Bought after the farm is filled, above Keep Cash)
     },
     ["Money"] = {
         ["Keep Cash"]          = 1500,    -- always keep at least this much money
@@ -56,7 +56,7 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Send To"]    = "encori21",                  -- username to funnel items to ("" = off)
         ["Send Every"] = 0,                   -- MINUTES between mail sends (0 = default ~45s). e.g. 5 = send every 5 minutes. This is the send INTERVAL only — it does NOT affect the per-item { Item, Count = N } threshold.
         ["Send"]       = {                    -- e.g. { "Gold", { Item = "Gold", Count = 30 } }  bare name = send the WHOLE stack each cycle; { Item, Count = N } = wait until you hold >= N, then send N at a time (a batch threshold, NOT a "max"). Equipped pets never sent.
-            "Moon Bloom", "Dragon's Breath", "Gold", "Rainbow", "Mega", "Carrot", 
+            "Moon Bloom", "Dragon's Breath", "Rainbow", "Mega", { Item = "Gold", Count = 20 }, { Item = "Carrot", Count = 500 }, 
             "Deer", "GoldenDragonfly", "Unicorn", "Robin", "Raccoon", "Turtle",
             "Super Sprinkler", "Legendary Sprinkler", "Super Watering Can",
         },

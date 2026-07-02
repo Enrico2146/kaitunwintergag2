@@ -34,7 +34,7 @@ _G.GAGConfig = _G.GAGConfig or {
         ["Exact"]       = {},                 -- e.g. { { fruit = "Carrot", mut = "Gold" } }
     },
     ["Pets"] = {
-        ["Buy"]            = { "Unicorn", "GoldenDragonfly", "Raccoon" },   -- list = tame UNLIMITED; OR caps { Robin = 6, Deer = 6 } = stop once you OWN N of that species; mix ok { "Unicorn", Deer = 6 }
+        ["Buy"]            = { "Unicorn", "Raccoon" },   -- list = tame UNLIMITED; OR caps { Robin = 6, Deer = 6 } = stop once you OWN N of that species; mix ok { "Unicorn", Deer = 6 }
         ["Equip"]          = { "Deer" },    -- PRIORITY (best first): fill all 6 slots from what you OWN — Unicorn first, then GoldenDragonfly, then Deer. (exact counts also work: { Deer = 4, Unicorn = 1 }; per-pet caps: { {Unicorn=2}, {Deer=6} })
         ["Auto Buy Slots"] = false,            -- true / false
         ["Max Pet Slots"]  = 6,               -- number 3..6
@@ -54,7 +54,7 @@ _G.GAGConfig = _G.GAGConfig or {
     ["Mail"] = {
         ["Auto Claim"] = true,                -- true / false
         ["Send To"]    = "encori21",                  -- username to funnel items to ("" = off)
-        ["Send Every"] = 15,                   -- MINUTES between mail sends (0 = default ~45s). e.g. 5 = send every 5 minutes. This is the send INTERVAL only — it does NOT affect the per-item { Item, Count = N } threshold.
+        ["Send Every"] = 0,                   -- MINUTES between mail sends (0 = default ~45s). e.g. 5 = send every 5 minutes. This is the send INTERVAL only — it does NOT affect the per-item { Item, Count = N } threshold.
         ["Send"]       = {                    -- e.g. { "Gold", { Item = "Gold", Count = 30 } }  bare name = send the WHOLE stack each cycle; { Item, Count = N } = wait until you hold >= N, then send N at a time (a batch threshold, NOT a "max"). Equipped pets never sent.
             "Moon Bloom", "Dragon's Breath", "Gold", "Rainbow", "Mega", "Carrot", 
             "Deer", "GoldenDragonfly", "Unicorn", "Robin", "Raccoon", "Turtle",
